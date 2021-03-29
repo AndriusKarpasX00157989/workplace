@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Strings Exercise</title>
+	<style>
+	 button { padding: 1em; margin: 1em;}
+	 p { margin: 0 1em; }
+	</style>
+    </head>
+    <body>
+	<button onclick="writeRandomWord();" type="button">Click to get a random 5 letter word</button>
+	<p id="rand-word"></p>
+
+
+	<script>
+	 //const alphabet = "abcdefghijklmnopqrstuvwxyz";
+	 function writeRandomWord() {
+		const alphabet = "abcdefghijklmnopqrstuvwxyz";
+		 let randomWord = "";
+		 // first part of exercise is commented out!
+		 //************************************************************
+		 //randomWord += alphabet.charAt(0);
+		 //randomWord += alphabet.charAt(2);
+		 //randomWord += alphabet.charAt(4);
+		 //randomWord += alphabet.charAt(6);
+		 //randomWord += alphabet.charAt(8);
+		 //document.getElementById("rand-word").innerHTML = randomWord;
+		 //**************************************************************
+		 for (let i=0; i < 5; i++) {
+		 let r = Math.floor(Math.random() * alphabet.length);
+		 randomWord += alphabet.charAt(r);}
+		 document.getElementById("rand-word").innerHTML = randomWord;
+	 }
+	 
+	 
+
+		 
+	</script>
+    </body>
+</html>
